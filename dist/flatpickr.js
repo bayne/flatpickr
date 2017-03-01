@@ -1444,7 +1444,7 @@ function Flatpickr(element, config) {
 
 		var newValue = curValue + step * delta;
 
-		if (input.value.length === 2) {
+		if (input.value.length === 2 || input.value < 0) {
 			var isHourElem = input === self.hourElement,
 			    isMinuteElem = input === self.minuteElement;
 
