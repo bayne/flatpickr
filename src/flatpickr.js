@@ -1848,7 +1848,7 @@ function Flatpickr(element, config) {
 
 		let newValue = curValue + (isWheel || isKeyDown) * step * delta;
 
-		if (e.target.value.length === 2) {
+		if (e.target.value.length === 2 || e.target.value < 0) {
 			const isHourElem = e.target === self.hourElement;
 
 			if (newValue < min) {
